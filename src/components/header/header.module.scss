@@ -1,0 +1,32 @@
+.header {
+  padding: 20px 0;
+  color: #333;
+}
+
+.container {
+  max-width: 1138px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    font-size: 32px;
+  }
+  .navigation {
+    max-width: 500px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 60px;
+    font-size: 18px;
+    .nav {
+      &:hover {
+        color: #e93c58;
+      }
+    }
+  }
+}

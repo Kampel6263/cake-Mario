@@ -1,0 +1,38 @@
+.button {
+  padding: 13px 40px;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  border: none;
+  border: 1px solid transparent;
+  transition: 0.1s;
+  cursor: pointer;
+  &.small {
+    font-size: 12px;
+    padding: 9px 30px;
+  }
+  &.default {
+    background: #fff;
+    color: #333;
+    &:hover {
+      color: #2dbba4;
+    }
+  }
+  &.primary {
+    background: #e93c58;
+    &:hover {
+      border: 1px solid #e93c58;
+      color: #e93c58;
+      background: #fff;
+    }
+  }
+  &.secondary {
+    background: #2dbba4;
+    &:hover {
+      background: rgb(20, 180, 140);
+    }
+  }
+  &.rounded {
+    border-radius: 20px;
+  }
+}
