@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cake-Mario/static/css/main.fd1e3f75.css",
-    "main.js": "/cake-Mario/static/js/main.7b56358e.js",
+    "main.css": "/cake-Mario/static/css/main.b3618222.css",
+    "main.js": "/cake-Mario/static/js/main.41d72af5.js",
     "static/js/787.148b4538.chunk.js": "/cake-Mario/static/js/787.148b4538.chunk.js",
     "static/media/tort1.jpg": "/cake-Mario/static/media/tort1.58284514cd2d6104e919.jpg",
     "static/media/шпалери-на-робочий-стіл-1.jpg": "/cake-Mario/static/media/шпалери-на-робочий-стіл-1.6ada44edbbcedf0bb2b4.jpg",
@@ -37,12 +37,12 @@
     "static/media/slick.ttf": "/cake-Mario/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/cake-Mario/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cake-Mario/index.html",
-    "main.fd1e3f75.css.map": "/cake-Mario/static/css/main.fd1e3f75.css.map",
-    "main.7b56358e.js.map": "/cake-Mario/static/js/main.7b56358e.js.map",
+    "main.b3618222.css.map": "/cake-Mario/static/css/main.b3618222.css.map",
+    "main.41d72af5.js.map": "/cake-Mario/static/js/main.41d72af5.js.map",
     "787.148b4538.chunk.js.map": "/cake-Mario/static/js/787.148b4538.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd1e3f75.css",
-    "static/js/main.7b56358e.js"
+    "static/css/main.b3618222.css",
+    "static/js/main.41d72af5.js"
   ]
 }
