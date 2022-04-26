@@ -4,6 +4,9 @@ import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import classes from "./contact-us.module.scss";
 import * as Yup from "yup";
+import Spiner from "../../assets/animation2/Ripple-1s-220px.svg";
+import classNames from "classnames";
+import Button from "../../components/button/button.component";
 
 type InitialValuesType = {
   user_name: string;
@@ -14,8 +17,7 @@ type InitialValuesType = {
 
 const ContactUs = () => {
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
-
-  const [disabledButton, setDisabledButton] = useState<boolean>(false);
+  const [submitting, setSubmitting] = useState<boolean>(false);
 
   const form = useRef<any>();
   const validationSchema = Yup.object().shape({
@@ -34,7 +36,7 @@ const ContactUs = () => {
   };
 
   const sendEmail = (e: any) => {
-    setDisabledButton(true);
+    setSubmitting(true);
     emailjs
       .sendForm(
         "service_zly4wts",
@@ -46,10 +48,11 @@ const ContactUs = () => {
         (result) => {
           console.log(result.text);
           setIsSubmitted(true);
+          setSubmitting(false);
         },
         (error) => {
           console.log(error.text);
-          setDisabledButton(false);
+          setSubmitting(false);
         }
       );
   };
@@ -58,53 +61,75 @@ const ContactUs = () => {
     <div className={classes.contactUs}>
       <div className={classes.container}>
         <h2>Contact us</h2>
-
-        {isSubmitted ? (
-          <div>Thank you for your list!</div>
-        ) : (
-          <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={sendEmail}
-          >
-            {({ errors }) => (
-              <Form ref={form}>
-                <div>
-                  <label htmlFor="user_name">Name*</label>
-                  <Field name={"user_name"}></Field>
-                  <div className={classes.errorMessage}>
-                    <ErrorMessage name="user_name" />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="user_email">Email*</label>
-                  <Field type="email" name={"user_email"}></Field>
-                  <div className={classes.errorMessage}>
-                    <ErrorMessage name="user_email" />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="">Phone*</label>
-                  <Field name={"user_phone"}></Field>
-                  <div className={classes.errorMessage}>
-                    <ErrorMessage name="user_phone" />
-                  </div>
-                </div>
-                <div className={classes.textarea}>
-                  <label htmlFor="massage">Message</label>
-                  <Field as={"textArea"} name={"message"}></Field>
-                  <div className={classes.errorMessage}>
-                    <ErrorMessage name="message" />
-                  </div>
-                </div>
-
-                <button disabled={disabledButton} type="submit">
-                  Sent
-                </button>
-              </Form>
+        <div className={classes.content}>
+          <div
+            className={classNames(
+              classes.contactForm,
+              submitting && classes.loading
             )}
-          </Formik>
-        )}
+          >
+            {submitting && (
+              <div className={classes.preloader}>
+                <object type="image/svg+xml" data={Spiner}>
+                  svg-animation
+                </object>
+              </div>
+            )}
+            {isSubmitted ? (
+              <div>Thank you for your list!</div>
+            ) : (
+              <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={sendEmail}
+              >
+                {({ errors }) => (
+                  <Form ref={form}>
+                    <div>
+                      <Field name={"user_name"} placeholder="Your name"></Field>
+                      <div className={classes.errorMessage}>
+                        <ErrorMessage name="user_name" />
+                      </div>
+                    </div>
+                    <div>
+                      <Field
+                        type="email"
+                        name={"user_email"}
+                        placeholder="Your email"
+                      ></Field>
+                      <div className={classes.errorMessage}>
+                        <ErrorMessage name="user_email" />
+                      </div>
+                    </div>
+                    <div>
+                      <Field
+                        name={"user_phone"}
+                        type="phone"
+                        placeholder="Phone number"
+                      ></Field>
+                      <div className={classes.errorMessage}>
+                        <ErrorMessage name="user_phone" />
+                      </div>
+                    </div>
+                    <div className={classes.textarea}>
+                      <Field
+                        as={"textArea"}
+                        name={"message"}
+                        placeholder="Message"
+                      ></Field>
+                      <div className={classes.errorMessage}>
+                        <ErrorMessage name="message" />
+                      </div>
+                    </div>
+
+                    <Button name="Sent" type="primary" />
+                  </Form>
+                )}
+              </Formik>
+            )}
+          </div>
+          <div>img</div>
+        </div>
       </div>
     </div>
   );

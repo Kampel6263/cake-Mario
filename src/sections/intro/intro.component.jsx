@@ -1,6 +1,6 @@
 // import React from "react";
 import classes from "./intro.module.scss";
-import IntroImg from '../../assets/img/intro.jpg'
+import IntroImg from '../../assets/img/intro2.jpg'
 import Button from "../../components/button/button.component";
 
 const Intro = () => {
