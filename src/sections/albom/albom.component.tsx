@@ -7,10 +7,15 @@ import classes from "./albom.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+type ImgType = {
+  number: string;
+  format: ".jpg" | ".png";
+};
+
 type TabsType = {
   name: string;
   value: string;
-  img: string[];
+  img: ImgType[];
 };
 
 const Albom = () => {
@@ -18,17 +23,34 @@ const Albom = () => {
     {
       name: "Торти",
       value: "tort",
-      img: ["img1", "img2", "ff", "ff"],
+      img: [
+        {
+          number: "1",
+          format: ".jpg",
+        },
+        {
+          number: "2",
+          format: ".jpg",
+        },
+        {
+          number: "3",
+          format: ".jpg",
+        },
+      ],
     },
     {
-      name: "Зефіри",
+      name: "Зефір",
       value: "zefir",
-      img: ["img1234", "img2234"],
-    },
-    {
-      name: "Рулети",
-      value: "rulet",
-      img: ["kkkkkk", "gggggggggg0", "ff"],
+      img: [
+        {
+          number: "1",
+          format: ".jpg",
+        },
+        {
+          number: "2",
+          format: ".jpg",
+        },
+      ],
     },
   ];
 
@@ -63,12 +85,12 @@ const Albom = () => {
           <div className={classes.slider}>
             <Slick className={classes.mainSlider} {...settings}>
               {activeTab.img.map((el, i) => (
-                <div key={el + i}>
+                <div key={el.number + i}>
                   <img
                     src={require("../../assets/albom/" +
                       activeTab.value +
-                      (i + 1) +
-                      ".jpg")}
+                      el.number +
+                      el.format)}
                     alt=""
                   />
                 </div>

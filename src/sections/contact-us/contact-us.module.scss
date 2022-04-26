@@ -1,0 +1,36 @@
+.contactUs {
+  padding: 40px 0;
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 20px;
+    label {
+      display: block;
+    }
+    input,
+    textarea {
+      outline: none;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+    textarea {
+      min-height: 120px;
+      max-height: 200px;
+    }
+    .textarea {
+      grid-column: span 2;
+    }
+    .errorMessage {
+      font-size: 14px;
+      color: red;
+    }
+  }
+}
+
+.container {
+  max-width: 1138px;
+  width: 90%;
+  margin: 0 auto;
+}
