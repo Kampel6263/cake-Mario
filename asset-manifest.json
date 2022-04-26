@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cake-Mario/static/css/main.b3618222.css",
-    "main.js": "/cake-Mario/static/js/main.7c008ff3.js",
+    "main.css": "/cake-Mario/static/css/main.8e62be24.css",
+    "main.js": "/cake-Mario/static/js/main.e21fbdeb.js",
     "static/js/787.148b4538.chunk.js": "/cake-Mario/static/js/787.148b4538.chunk.js",
     "static/media/tort1.jpg": "/cake-Mario/static/media/tort1.58284514cd2d6104e919.jpg",
     "static/media/шпалери-на-робочий-стіл-1.jpg": "/cake-Mario/static/media/шпалери-на-робочий-стіл-1.6ada44edbbcedf0bb2b4.jpg",
@@ -21,13 +21,13 @@
     "static/media/cool-computer-pictures.jpg": "/cake-Mario/static/media/cool-computer-pictures.15463425e539991696c1.jpg",
     "static/media/Free-Computer-Wallpaper-Desktop.jpg": "/cake-Mario/static/media/Free-Computer-Wallpaper-Desktop.219a45b55d6a6fcaa739.jpg",
     "static/media/12677_Tropical-summer-holiday-Wonderful-place-in-Thailand-Asia.jpg": "/cake-Mario/static/media/12677_Tropical-summer-holiday-Wonderful-place-in-Thailand-Asia.501af044944a81f1be8b.jpg",
+    "static/media/intro2.jpg": "/cake-Mario/static/media/intro2.15131573b66387fcaf9b.jpg",
     "static/media/game-of-thrones-desktop-wallpaper.jpg": "/cake-Mario/static/media/game-of-thrones-desktop-wallpaper.fdeb79886f1a625cde28.jpg",
     "static/media/tort3.jpg": "/cake-Mario/static/media/tort3.aa330c9513f7eba6b77f.jpg",
     "static/media/256824.jpg": "/cake-Mario/static/media/256824.b0a36641611423c1dce1.jpg",
     "static/media/886292_554317964589526_1973927882_o.jpg": "/cake-Mario/static/media/886292_554317964589526_1973927882_o.2dbf90b72ff8a81bd677.jpg",
     "static/media/maxresdefault (2).jpg": "/cake-Mario/static/media/maxresdefault (2).575d8b2c78d24f12d7e9.jpg",
     "static/media/maxresdefault (1).jpg": "/cake-Mario/static/media/maxresdefault (1).82664bc4d295f2e33752.jpg",
-    "static/media/intro.jpg": "/cake-Mario/static/media/intro.7a8fe5a00bbc4d17b8db.jpg",
     "static/media/maxresdefault.jpg": "/cake-Mario/static/media/maxresdefault.93ccc40d13c22cab7de3.jpg",
     "static/media/tort4.jpg": "/cake-Mario/static/media/tort4.b6063e0db6a3ee2ac404.jpg",
     "static/media/Живая-природа.jpg": "/cake-Mario/static/media/Живая-природа.2de4be92e1f232497be7.jpg",
@@ -36,13 +36,14 @@
     "static/media/slick.eot": "/cake-Mario/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/cake-Mario/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/cake-Mario/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/Ripple-1s-220px.svg": "/cake-Mario/static/media/Ripple-1s-220px.47f2d2caa1af8998453c95168524c809.svg",
     "index.html": "/cake-Mario/index.html",
-    "main.b3618222.css.map": "/cake-Mario/static/css/main.b3618222.css.map",
-    "main.7c008ff3.js.map": "/cake-Mario/static/js/main.7c008ff3.js.map",
+    "main.8e62be24.css.map": "/cake-Mario/static/css/main.8e62be24.css.map",
+    "main.e21fbdeb.js.map": "/cake-Mario/static/js/main.e21fbdeb.js.map",
     "787.148b4538.chunk.js.map": "/cake-Mario/static/js/787.148b4538.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3618222.css",
-    "static/js/main.7c008ff3.js"
+    "static/css/main.8e62be24.css",
+    "static/js/main.e21fbdeb.js"
   ]
 }
