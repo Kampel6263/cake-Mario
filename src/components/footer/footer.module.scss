@@ -1,3 +1,39 @@
 .footer {
-  padding: 40px 0;
+  padding: 117px 0 0;
+  background: black;
+  text-align: center;
+  color: #fff;
+  .container {
+    max-width: 1138px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  h2 {
+    font-weight: 400;
+  }
+  .buttons {
+    button {
+      &:first-child {
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+.bottom {
+  margin-top: 112px;
+  background: #181818;
+  border-top: 1px solid #fff;
+  padding: 28px 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 40px;
 }

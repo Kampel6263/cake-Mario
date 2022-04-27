@@ -6,16 +6,24 @@ type ButtonProps = {
   type: "primary" | "secondary" | "default";
   rounded?: boolean;
   size?: "small";
+  color?: "red" | "white";
 };
 
-const Button: React.FC<ButtonProps> = ({ name, type, rounded, size }) => {
+const Button: React.FC<ButtonProps> = ({
+  name,
+  type,
+  rounded,
+  size,
+  color,
+}) => {
   return (
     <button
       className={classNames(
         classes.button,
         classes[type],
         rounded && classes.rounded,
-        size && classes[size]
+        size && classes[size],
+        color && classes[color]
       )}
     >
       {name}

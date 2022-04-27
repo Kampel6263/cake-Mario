@@ -52,6 +52,24 @@ const Albom = () => {
         },
       ],
     },
+    {
+      name: "Рулети",
+      value: "rulet",
+      img: [
+        {
+          number: "1",
+          format: ".jpg",
+        },
+        {
+          number: "2",
+          format: ".jpg",
+        },
+        {
+          number: "3",
+          format: ".jpg",
+        },
+      ],
+    },
   ];
 
   const [activeTab, setActiveTab] = useState<TabsType>(tabs[0]);

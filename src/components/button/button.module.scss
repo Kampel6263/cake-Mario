@@ -3,7 +3,6 @@
   font-size: 14px;
   color: #fff;
   outline: none;
-  border: none;
   border: 1px solid transparent;
   transition: 0.1s;
   cursor: pointer;
@@ -34,5 +33,13 @@
   }
   &.rounded {
     border-radius: 20px;
+  }
+  &.red {
+    color: #e93c58;
+    &:hover {
+      color: #fff;
+      background: transparent;
+      border: 1px solid #fff;
+    }
   }
 }
