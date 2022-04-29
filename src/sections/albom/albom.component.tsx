@@ -4,18 +4,35 @@ import Slick from "react-slick";
 import Button from "../../components/button/button.component";
 import classes from "./albom.module.scss";
 
+import Spiner from "../../assets/animation2/Ripple-1s-220px.svg";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Slide from "./slide/slide.component";
 
-type ImgType = {
+export type ImgType = {
   number: string;
   format: ".jpg" | ".png";
 };
 
-type TabsType = {
+export type TabsType = {
   name: string;
   value: string;
   img: ImgType[];
+};
+
+const Arrow: React.FC<{
+  direction: "left" | "right";
+  onClick?: () => void;
+}> = ({ direction, onClick }) => {
+  return (
+    <button
+      className={classNames(classes.slickButton, classes[direction])}
+      onClick={onClick}
+    >
+      {direction === "left" ? "❮" : "❯"}
+    </button>
+  );
 };
 
 const Albom = () => {
@@ -50,6 +67,34 @@ const Albom = () => {
           number: "2",
           format: ".jpg",
         },
+        {
+          number: "3",
+          format: ".jpg",
+        },
+        {
+          number: "4",
+          format: ".jpg",
+        },
+        {
+          number: "5",
+          format: ".jpg",
+        },
+        {
+          number: "6",
+          format: ".jpg",
+        },
+        {
+          number: "7",
+          format: ".jpg",
+        },
+        {
+          number: "8",
+          format: ".jpg",
+        },
+        {
+          number: "9",
+          format: ".jpg",
+        },
       ],
     },
     {
@@ -75,13 +120,21 @@ const Albom = () => {
   const [activeTab, setActiveTab] = useState<TabsType>(tabs[0]);
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-  };
+    nextArrow: <Arrow direction="right" />,
+    prevArrow: <Arrow direction="left" />,
 
+    appendDots: (dots: any) => (
+      <div style={{ marginBottom: "20px" }}>
+        <ul className={classes.dots}> {dots} </ul>
+      </div>
+    ),
+  };
+  console.log("render");
   return (
     <div className={classes.albom}>
       <div className={classes.container}>
@@ -94,7 +147,7 @@ const Albom = () => {
                   el.value === activeTab.value ? classes.active : ""
                 )}
                 key={el.value + i}
-                onClick={() => setActiveTab(el)}
+                onClick={() => activeTab.value !== el.value && setActiveTab(el)}
               >
                 <Button name={el.name} type={"secondary"} size={"small"} />
               </div>
@@ -103,15 +156,7 @@ const Albom = () => {
           <div className={classes.slider}>
             <Slick className={classes.mainSlider} {...settings}>
               {activeTab.img.map((el, i) => (
-                <div key={el.number + i}>
-                  <img
-                    src={require("../../assets/albom/" +
-                      activeTab.value +
-                      el.number +
-                      el.format)}
-                    alt=""
-                  />
-                </div>
+                <Slide el={el} key={el.number + i} activeTab={activeTab} />
               ))}
             </Slick>
           </div>

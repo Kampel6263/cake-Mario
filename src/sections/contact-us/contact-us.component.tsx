@@ -7,6 +7,7 @@ import * as Yup from "yup";
 import Spiner from "../../assets/animation2/Ripple-1s-220px.svg";
 import classNames from "classnames";
 import Button from "../../components/button/button.component";
+import Loader from "../../components/loader/loader.component";
 
 type InitialValuesType = {
   user_name: string;
@@ -56,7 +57,6 @@ const ContactUs = () => {
         }
       );
   };
-  console.log();
   return (
     <div className={classes.contactUs}>
       <div className={classes.container}>
@@ -70,9 +70,7 @@ const ContactUs = () => {
           >
             {submitting && (
               <div className={classes.preloader}>
-                <object type="image/svg+xml" data={Spiner}>
-                  svg-animation
-                </object>
+                <Loader />
               </div>
             )}
             {isSubmitted ? (
@@ -113,7 +111,7 @@ const ContactUs = () => {
                     </div>
                     <div className={classes.textarea}>
                       <Field
-                        as={"textArea"}
+                        as={"textarea"}
                         name={"message"}
                         placeholder="Message"
                       ></Field>

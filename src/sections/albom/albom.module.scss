@@ -48,7 +48,41 @@
   }
 }
 
-.mainSlider {
-  // background: #eca;
-  // height: 500px;
+// .dots {
+//   button {
+//     &::before {
+//       font-size: 12px !important;
+//       color: #2dbba4 !important;
+//     }
+//     // &:focus::before {
+//     //   opacity: 0.25 !important;
+//     // }
+//   }
+// }
+
+.slickButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  color: #fff;
+  border: none;
+  outline: none;
+  background: rgba($color: #2dbba4, $alpha: 0.4);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.1s;
+  &:hover {
+    background: rgba($color: #2dbba4, $alpha: 0.9);
+  }
+  &.left {
+    left: 25px;
+  }
+  &.right {
+    right: 25px;
+  }
 }
