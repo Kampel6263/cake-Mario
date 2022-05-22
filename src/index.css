@@ -14,3 +14,62 @@ body {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 } */
+
+.slick-dots button:focus:before {
+  opacity: 0.25 !important;
+}
+
+.slick-dots .slick-active button:focus:before {
+  opacity: 1 !important;
+}
+
+.slick-dots {
+  margin-bottom: 0 !important;
+  bottom: 0 !important;
+}
+.slick-dots ul {
+  background: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  padding-bottom: 20px;
+}
+
+.slick-dots ul li {
+  margin: 0 2px !important;
+  width: 12px;
+  height: 12px;
+  padding: 0 4px;
+}
+
+.slick-dots ul li button {
+  width: 12px;
+  height: 12px;
+  padding: 2px;
+}
+
+.slick-dots ul li button::before {
+  width: 12px;
+  height: 12px;
+  /* padding: 2px; */
+}
+
+.slick-arrow {
+  z-index: 20;
+}
+
+.slick-arrow.slick-next {
+  right: 25px;
+}
+
+.slick-arrow.slick-prev {
+  left: 25px;
+}
+
+.slick-dots button::before {
+  font-size: 12px !important;
+  color: #2dbba4 !important;
+}
+.slick-dots button:focus::before {
+  opacity: 0.25 !important;
+}
