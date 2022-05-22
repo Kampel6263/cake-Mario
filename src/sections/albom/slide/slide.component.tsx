@@ -29,9 +29,6 @@ const Slide: React.FC<SlideProps> = ({ el, activeTab }) => {
           el.number +
           el.format)}
       />
-      <div className={classNames(classes.loader, imgLoading && classes.active)}>
-        <Loader />
-      </div>
     </div>
   );
 };

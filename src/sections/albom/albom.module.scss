@@ -35,7 +35,11 @@
 
   .slider {
     width: 100%;
+    background: url("https://cdn.hovia.com/app/uploads/Green-Carrot-Cake-Baking-Wallpaper-Mural-Plain.jpg")
+      center no-repeat;
+    background-size: cover;
     max-width: 100%;
+    position: relative;
     overflow: hidden;
     margin-top: 40px;
     // padding: 0 50px;
@@ -45,20 +49,19 @@
       height: 500px;
       object-fit: cover;
     }
+    .mainSlider {
+      z-index: 10;
+      position: relative;
+    }
+    .loader {
+      position: absolute;
+      z-index: 5;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
-
-// .dots {
-//   button {
-//     &::before {
-//       font-size: 12px !important;
-//       color: #2dbba4 !important;
-//     }
-//     // &:focus::before {
-//     //   opacity: 0.25 !important;
-//     // }
-//   }
-// }
 
 .slickButton {
   position: absolute;

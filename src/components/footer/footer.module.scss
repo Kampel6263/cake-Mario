@@ -36,4 +36,19 @@
   display: grid;
   grid-auto-flow: column;
   column-gap: 40px;
+  // також щоб воно гарно виглядало я дописав ос такі стилі
+  a {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+  }
+  span {
+    margin-left: 10px;
+    line-height: 23px;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
 }

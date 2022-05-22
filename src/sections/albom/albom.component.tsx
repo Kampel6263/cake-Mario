@@ -9,6 +9,7 @@ import Spiner from "../../assets/animation2/Ripple-1s-220px.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slide from "./slide/slide.component";
+import Loader from "../../components/loader/loader.component";
 
 export type ImgType = {
   number: string;
@@ -117,6 +118,8 @@ const Albom = () => {
     },
   ];
 
+  const [activeSlide, setActiveSlide] = useState<number | null>(0);
+
   const [activeTab, setActiveTab] = useState<TabsType>(tabs[0]);
 
   const settings = {
@@ -159,6 +162,9 @@ const Albom = () => {
                 <Slide el={el} key={el.number + i} activeTab={activeTab} />
               ))}
             </Slick>
+            <div className={classes.loader}>
+              <Loader />
+            </div>
           </div>
         </div>
       </div>

@@ -18,7 +18,16 @@ const Footer = () => {
           <div className={classes.content}>
             <div>© 2022 All right reserved</div>
             <div className={classes.nav}>
-              <div>About</div>
+              {/* <a> - це посилання, у нього я засунув фотку(img) і текст загорнув у span(можна було не загортати, потім поясню чому я так зробив) */}
+              <a
+                href={"https://www.facebook.com/profile.php?id=100014767145446"}
+              >
+                {/* шлях до фотки записуэмо ось так src={require("../../assets/img/intro.jpg")} */}
+                {/* тут поки я ввів шлях до нашої титульної фотки, тому що там немає фотки фейсбуку, якщо ти її туди положив, то вкажи шлях до неї */}
+                <img src={require("../../assets/img/intro.jpg")} alt="" />
+                <span>Facebook</span>
+              </a>
+
               <div>Menu</div>
               <div>Location</div>
             </div>
