@@ -21,7 +21,7 @@ type TabsType = {
 const Albom = () => {
   const tabs: TabsType[] = [
     {
-      name: "Торти",
+      name: "Т",
       value: "tort",
       img: [
         {
@@ -68,6 +68,61 @@ const Albom = () => {
           number: "3",
           format: ".jpg",
         },
+      ],
+    },
+    {
+      name: "Кенді-бар",
+      value: "kendibar",
+      img: [
+        {
+          number: "1",
+          format: ".jpg",
+        },
+        
+      ],
+    },
+    {
+      name: "Пряники",
+      value: "pjanuku",
+      img: [
+        {
+          number: "1",
+          format: ".jpg",
+        },
+        
+      ],
+    },
+    {
+      name: "Шоколад",
+      value: "shokolad",
+      img: [
+        {
+          number: "1",
+          format: ".jpg",
+        },
+        
+      ],
+    },
+    {
+      name: "Макаронс",
+      value: "makarons",
+      img: [
+        {
+          number: "1",
+          format: ".jpg",
+        },
+        
+      ],
+    },
+    {
+      name: "    Інше",
+      value: "inshe",
+      img: [
+        {
+          number: "1",
+          format: ".jpg",
+        },
+        
       ],
     },
   ];

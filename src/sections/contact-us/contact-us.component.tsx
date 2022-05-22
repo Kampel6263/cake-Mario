@@ -60,7 +60,7 @@ const ContactUs = () => {
   return (
     <div className={classes.contactUs}>
       <div className={classes.container}>
-        <h2>Contact us</h2>
+        <h2>Маєте питання, пишіть.</h2>
         <div className={classes.content}>
           <div
             className={classNames(

@@ -9,10 +9,10 @@ const Intro = () => {
       <img src={IntroImg} alt="" />
     </div>
     <div className={classes.content}>
-      <h1>Miodis cakes are baked in heaven</h1>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+      <h1>Sweet Dreams</h1>
+      <p>Все готується з Любов'ю, та з якісних інгредієнтів. Сьогодні Солодка Мрія стає рєальністю.</p>
       <div className={classes.buttons}>
-        <Button name="Contact us" type="secondary"/>
+        <Button name="Con. us" type="secondary"/>
         <Button name="Order Now" type="default"/>
       </div>
     </div>
